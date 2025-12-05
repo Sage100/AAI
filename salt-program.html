@@ -9,23 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <div class="wrap bar">
-      <a class="brand" href="index.html">
-        <span class="badge" aria-hidden="true">AAI</span>
-        <span class="txt">Anabaptist Aid Initiative</span>
-      </a>
-      <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
-      <nav id="menu" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="videos.html">Videos</a>
-        <a class="active" href="salt-program.html">SALT Program</a>
-        <a class="btn secondary" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact</a>
-        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-      </nav>
-    </div>
-  </header>
+<body data-page="salt-program">
+  <div id="site-header"></div>
 
   <main>
     <section class="hero" role="img" aria-label="SALT training gathering">
@@ -50,7 +35,11 @@
           </li>
           <li class="program-item">
             <b>Vocational Training (LHVS)</b>
-            Living Hope Vocational School offers trades such as tailoring, agriculture, and carpentry, integrating hands-on skills with biblical foundations to launch sustainable livelihoods.
+            Living Hope Vocational School offers core trades highlighted by SALT Nigeria: carpentry, tailoring, bagmaking, and shoemaking. Hands-on skills pair with biblical foundations to launch sustainable livelihoods.
+          </li>
+          <li class="program-item">
+            <b>Youth Savings Groups</b>
+            Youth cohorts learn disciplined saving, business basics, and Christ-centered accountability, mirroring the approach used in adult Savings Groups while preparing the next generation.
           </li>
           <li class="program-item">
             <b>Business Teaching</b>
@@ -73,8 +62,8 @@
         </div>
         <div class="copy">
           <h2>How AAI serves Nigeria</h2>
-          <p>AAI is the locally registered entity that coordinates SALT activities, onboards new savings groups, and aligns reporting with Brethren Hope for the Nations and Christian Aid Ministries. This alignment keeps Nigerian operations transparent and accountable.</p>
-          <p>Program materials, training cohorts, and donor communication mirror the approach described on the SALT Nigeria website, ensuring a consistent experience for churches, community leaders, and government partners.</p>
+          <p>AAI is the locally registered entity that coordinates SALT activities, onboards new Savings Groups and Youth Savings Groups, and aligns reporting with Brethren Hope for the Nations (the U.S. 501(c)(3) overseeing the work) and Christian Aid Ministries. This alignment keeps Nigerian operations transparent and accountable.</p>
+          <p>Program materials, training cohorts, and donor communication mirror the approach described on the SALT Nigeria website, ensuring a consistent experience for churches, community leaders, and government partners across Plateau, Borno, Bauchi, and neighboring states.</p>
           <div class="cta">
             <a class="btn chip" href="https://www.saltnigeria.org" target="_blank" rel="noopener">Visit saltnigeria.org</a>
           </div>
@@ -88,8 +77,8 @@
         <div class="grid">
           <div class="card" style="grid-column: span 6;">
             <h3>Partner with AAI</h3>
-            <p>Churches and community leaders can invite AAI to introduce SALT savings groups, provide facilitator training, and set up reporting for accountability.</p>
-            <p><a class="btn chip" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Request information</a></p>
+            <p>Churches and community leaders can invite AAI to introduce SALT Savings Groups, Youth Savings Groups, provide facilitator training, and set up reporting for accountability.</p>
+            <p><a class="btn chip" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Request information</a></p>
           </div>
           <div class="card" style="grid-column: span 6;">
             <h3>Support financially</h3>
@@ -101,26 +90,8 @@
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="wrap">
-      <div class="foot-actions">
-        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-        <a class="btn ghost" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact Us</a>
-      </div>
-      <p class="small">
-        © <span id="y"></span> Anabaptist Aid Initiative. AAI administers SALT in Nigeria in partnership with BHN and CAM; online forms are hosted on saltnigeria.org.
-      </p>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const navBtn = document.getElementById('nav');
-    navBtn?.addEventListener('click', () => {
-      navBtn.classList.toggle('open');
-      const expanded = navBtn.getAttribute('aria-expanded') === 'true' || false;
-      navBtn.setAttribute('aria-expanded', String(!expanded));
-    });
-  </script>
+  <script src="template-loader.js"></script>
 </body>
 </html>

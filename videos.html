@@ -9,23 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <div class="wrap bar">
-      <a class="brand" href="index.html">
-        <span class="badge" aria-hidden="true">AAI</span>
-        <span class="txt">Anabaptist Aid Initiative</span>
-      </a>
-      <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
-      <nav id="menu" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a class="active" href="videos.html">Videos</a>
-        <a href="salt-program.html">SALT Program</a>
-        <a class="btn secondary" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact</a>
-        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-      </nav>
-    </div>
-  </header>
+<body data-page="videos">
+  <div id="site-header"></div>
 
   <main>
     <section class="hero" role="img" aria-label="Community training session in Nigeria">
@@ -87,26 +72,8 @@
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="wrap">
-      <div class="foot-actions">
-        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-        <a class="btn ghost" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact Us</a>
-      </div>
-      <p class="small">
-        © <span id="y"></span> Anabaptist Aid Initiative. Online donations and inquiry forms are processed on the SALT Nigeria website.
-      </p>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const navBtn = document.getElementById('nav');
-    navBtn?.addEventListener('click', () => {
-      navBtn.classList.toggle('open');
-      const expanded = navBtn.getAttribute('aria-expanded') === 'true' || false;
-      navBtn.setAttribute('aria-expanded', String(!expanded));
-    });
-  </script>
+  <script src="template-loader.js"></script>
 </body>
 </html>
