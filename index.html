@@ -9,23 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <div class="wrap bar">
-      <a class="brand" href="index.html">
-        <span class="badge" aria-hidden="true">AAI</span>
-        <span class="txt">Anabaptist Aid Initiative</span>
-      </a>
-      <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
-      <nav id="menu" aria-label="Primary">
-        <a class="active" href="index.html">Home</a>
-        <a href="videos.html">Videos</a>
-        <a href="salt-program.html">SALT Program</a>
-        <a class="btn secondary" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact</a>
-        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-      </nav>
-    </div>
-  </header>
+<body data-page="home">
+  <div id="site-header"></div>
 
   <main id="main">
     <section class="hero" role="img" aria-label="Savings group gathering in Nigeria">
@@ -33,9 +18,10 @@
         <span class="eyebrow">Registered NGO in Nigeria</span>
         <h1>Anabaptist Aid Initiative</h1>
         <p class="lead">
-          AAI is a registered Nigerian NGO that administers the SALT program in cooperation with Brethren Hope for the Nations (BHN) and Christian Aid Ministries (CAM).
-          This official website is designed to validate our organization and provide clear contact and donation pathways within Nigeria.
+          AAI is a registered Nigerian NGO that facilitates the SALT program in Nigeria in partnership with Brethren Hope for the Nations (BHN) and Christian Aid Ministries (CAM).
+          This site connects community members, donors, and government partners directly to SALT Nigeria resources.
         </p>
+        <p class="note">Serving Plateau, Borno, Bauchi, Adamawa, and nearby states with Savings Groups, Youth Savings Groups, and Living Hope Vocational School training.</p>
         <div class="cta">
           <a class="btn primary" href="#verification">View verification</a>
           <a class="btn ghost" href="https://www.saltnigeria.org" target="_blank" rel="noopener">Visit SALT Nigeria</a>
@@ -83,6 +69,7 @@
             <div>
               <b>Jurisdiction</b>
               <div>Nigeria (NG)</div>
+              <div class="note">Programs active across Plateau, Borno, Bauchi, and neighboring states.</div>
             </div>
           </div>
           <div class="kpi">
@@ -108,8 +95,8 @@
         <h2 id="relationship">Relationship to SALT, BHN, and CAM</h2>
         <p>
           AAI is the registered Nigerian NGO that administers the SALT program locally. We work in cooperation with
-          <a href="https://www.saltnigeria.org/bhn" target="_blank" rel="noopener">Brethren Hope for the Nations (BHN)</a> and
-          Christian Aid Ministries (CAM) as part of the broader ministry framework in Nigeria.
+          <a href="https://www.saltnigeria.org/bhn" target="_blank" rel="noopener">Brethren Hope for the Nations (BHN)</a>, the U.S. 501(c)(3) that oversees the work, and Christian Aid Ministries (CAM), which provides ministry support and accountability.
+          Our role is to facilitate SALT Nigeria field teams, liaise with communities, and report impact transparently.
         </p>
         <div class="logos" aria-label="Partner logos">
           <img src="https://images.squarespace-cdn.com/content/v1/620550fe91e339149f70eaa9/21901b1c-0253-401d-9846-202250790972/Salt%2Band%2BBHN%2B2.png" alt="SALT and BHN logos" />
@@ -121,13 +108,37 @@
       <div class="wrap media">
         <div class="copy">
           <h2>Programs we support</h2>
-          <p>Through the SALT program we facilitate savings groups, youth engagement, and vocational training via Living Hope Vocational School. These initiatives cultivate disciplined saving, quality teaching, and measurable growth.</p>
+          <p>Through the SALT program we facilitate Savings Groups, Youth Savings Groups, and vocational training via Living Hope Vocational School. Core trades include carpentry, tailoring, bagmaking, and shoemaking, mirroring the courses offered on the SALT Nigeria site.</p>
+          <p>Our teams coach facilitators, mentor youth, and connect participants to business teaching so families can thrive across Plateau, Borno, Bauchi, and neighboring states.</p>
           <p><a href="https://www.saltnigeria.org" target="_blank" rel="noopener">Learn more at SALT Nigeria</a></p>
         </div>
         <div class="pic">
           <figure class="frame">
             <img src="https://images.squarespace-cdn.com/content/v1/620550fe91e339149f70eaa9/1650908281767-FZ56NPCQ5WVTWXTI0TRC/nigerian-money-in-a-magnifying-glass-2021-08-29-04-49-55-utc.jpg" alt="Nigerian naira under a magnifying glass" />
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Impact across Nigeria</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Momentum</h3>
+            <p>8,200+ active clients participate in Savings Groups and Youth Savings Groups across Plateau, Borno, Bauchi, and Adamawa States.</p>
+            <p class="note">Hundreds of groups meet weekly, building accountable saving habits.</p>
+          </div>
+          <div class="card">
+            <h3>Growth</h3>
+            <p>Millions of naira are saved collectively each cycle, enabling members to launch or expand small businesses.</p>
+            <p class="note">Common ventures include tailoring shops, carpentry workshops, bagmaking cooperatives, and shoemaking stalls.</p>
+          </div>
+          <div class="card">
+            <h3>Stories of change</h3>
+            <p><em>“My Youth Savings Group helped me buy my first sewing machine. Now I sew school uniforms for my community.”</em> — Tailoring student, Plateau State</p>
+            <p><em>“Our group’s discipline in Borno State keeps us accountable and gives us courage to grow.”</em> — Savings Group leader</p>
+          </div>
         </div>
       </div>
     </section>
@@ -139,8 +150,8 @@
           <div class="card" style="grid-column: span 7;">
             <h3>General inquiries</h3>
             <p>Email: <a href="mailto:info@anabaptistaid.org">info@anabaptistaid.org</a></p>
-            <p>Phone: ____________________________</p>
-            <p>Address: ____________________________</p>
+            <p>Address: NO. 12 OLD BUKURU ROAD (J.M. SAMCHI ROAD) EYN CHURCH, OPPOSITE PLATEAU STATE HOUSE OF ASSEMBLY COMPLEX, JOS NORTH, PLATEAU STATE</p>
+            <p><a class="btn chip" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Reach the SALT Nigeria team</a></p>
           </div>
           <div class="card" style="grid-column: span 5;">
             <h3>Donations</h3>
@@ -152,26 +163,8 @@
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="wrap">
-      <div class="foot-actions">
-        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-        <a class="btn ghost" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact Us</a>
-      </div>
-      <p class="small">
-        © <span id="y"></span> Anabaptist Aid Initiative. This informational site exists to identify the registered NGO in Nigeria and to explain our cooperation with partners. Online donations are processed on the SALT Nigeria website.
-      </p>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const navBtn = document.getElementById('nav');
-    navBtn?.addEventListener('click', () => {
-      navBtn.classList.toggle('open');
-      const expanded = navBtn.getAttribute('aria-expanded') === 'true' || false;
-      navBtn.setAttribute('aria-expanded', String(!expanded));
-    });
-  </script>
+  <script src="template-loader.js"></script>
 </body>
 </html>
