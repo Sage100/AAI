@@ -66,14 +66,60 @@ nav .active { color: var(--accent); }
 .hero {
   position: relative;
   color: #fff;
+  overflow: hidden;
   background:
-    linear-gradient(to bottom right, rgba(19,38,63,.72), rgba(191,200,217,.55)),
+    linear-gradient(120deg, rgba(19,38,63,.82), rgba(19,38,63,.56) 46%, rgba(191,200,217,.32)),
     url('https://images.squarespace-cdn.com/content/v1/620550fe91e339149f70eaa9/968b0d52-3b08-438a-92b0-5698b3a87f50/1P6A5314.jpeg') center/cover no-repeat;
 }
-.hero .wrap { padding: 96px 22px 110px; }
-.eyebrow { display:inline-block; background: rgba(191,200,217,.92); color:#152033; padding:6px 10px; border-radius:7px; font-weight:700; letter-spacing:.35px; }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 22% 24%, rgba(255,255,255,.12), transparent 38%),
+              radial-gradient(circle at 82% 14%, rgba(43,111,109,.18), transparent 40%);
+}
+.hero .wrap {
+  position: relative;
+  padding: 96px 22px 110px;
+  z-index: 1;
+  display: grid;
+  place-items: center start;
+}
+.hero-panel {
+  position: relative;
+  max-width: 880px;
+  background: linear-gradient(135deg, rgba(255,255,255,.26), rgba(255,255,255,.08));
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 24px 60px rgba(0, 15, 35, .36);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  border-radius: 20px;
+  padding: 32px 32px 34px;
+  color: #0d1a2f;
+  overflow: hidden;
+}
+.hero-panel::before {
+  content: '';
+  position: absolute;
+  inset: -20% -30% auto auto;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(43,111,109,.25), transparent 65%);
+  opacity: .7;
+  pointer-events: none;
+}
+.hero-panel::after {
+  content: '';
+  position: absolute;
+  inset: auto auto -32% -28%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255,255,255,.18), transparent 68%);
+  pointer-events: none;
+}
+.eyebrow { display:inline-block; background: rgba(191,200,217,.85); color:#10223d; padding:7px 12px; border-radius:9px; font-weight:750; letter-spacing:.4px; box-shadow: 0 8px 18px rgba(0,0,0,.12); }
 h1 { font-family: 'Merriweather', Georgia, serif; font-size: clamp(28px, 4.4vw, 52px); line-height:1.12; margin: 16px 0 12px; }
-.lead { font-size: clamp(16px, 2.4vw, 19px); max-width: 800px; opacity:.98; }
+.lead { font-size: clamp(16px, 2.4vw, 19px); max-width: 800px; opacity:.94; color:#0f233c; }
 
 /* Buttons */
 .btn {
@@ -90,6 +136,12 @@ h1 { font-family: 'Merriweather', Georgia, serif; font-size: clamp(28px, 4.4vw, 
 .btn.chip { background: var(--stone); border-color: #e7e7e7; color:#22314c; box-shadow: none; }
 
 .cta { margin-top: 24px; display:flex; gap:12px; flex-wrap:wrap; }
+
+.hero-panel .lead { color:#0d1a2f; }
+.hero-panel .btn.primary { background:#0f172a; color:#fff; box-shadow: var(--shadow); }
+.hero-panel .btn.primary:hover { background:#13263f; }
+.hero-panel .btn.ghost { border-color: rgba(15,23,42,.35); color:#0d1a2f; background: rgba(255,255,255,.55); box-shadow: inset 0 1px 0 rgba(255,255,255,.5); }
+.hero-panel .btn.ghost:hover { background: rgba(255,255,255,.72); text-decoration:none; }
 
 /* Sections */
 section { padding: 72px 0; }
