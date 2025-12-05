@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AAI Videos | Stories from SALT Nigeria</title>
+  <meta name="description" content="Watch SALT Nigeria and Anabaptist Aid Initiative stories, testimonies, and overviews." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="index.html">
+        <span class="badge" aria-hidden="true">AAI</span>
+        <span class="txt">Anabaptist Aid</span>
+      </a>
+      <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
+      <nav id="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a class="active" href="videos.html">Videos</a>
+        <a href="salt-program.html">SALT Program</a>
+        <a class="btn secondary" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact</a>
+        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="img" aria-label="Community training session in Nigeria">
+      <div class="wrap">
+        <span class="eyebrow">Media from the field</span>
+        <h1>Videos & Stories</h1>
+        <p class="lead">A glimpse into the SALT savings groups, vocational training, and partner collaboration made possible through Anabaptist Aid Initiative.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.saltnigeria.org" target="_blank" rel="noopener">Visit SALT Nigeria</a>
+          <a class="btn ghost" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Support the work</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Featured clips</h2>
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/7sDY4m8KNLc" title="SALT savings group introduction" allowfullscreen></iframe>
+            <div class="body">
+              <h3>Savings group overview</h3>
+              <p>How disciplined saving and accountability groups strengthen families and businesses.</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/9No-FiEInLA" title="Vocational training spotlight" allowfullscreen></iframe>
+            <div class="body">
+              <h3>Living Hope Vocational School</h3>
+              <p>Students learn practical skills, biblical principles, and stewardship that translate into stable livelihoods.</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" title="Community transformation" allowfullscreen></iframe>
+            <div class="body">
+              <h3>Community transformation</h3>
+              <p>Stories of hope from SALT participants and the local leaders who mentor them.</p>
+            </div>
+          </div>
+        </div>
+        <p class="note" style="margin-top:16px;">Looking for more? Contact the AAI communications team for local media resources.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      <div class="foot-actions">
+        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
+        <a class="btn ghost" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact Us</a>
+      </div>
+      <p class="small">
+        © <span id="y"></span> Anabaptist Aid Initiative. Online donations and inquiry forms are processed on the SALT Nigeria website.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const navBtn = document.getElementById('nav');
+    navBtn?.addEventListener('click', () => {
+      navBtn.classList.toggle('open');
+      const expanded = navBtn.getAttribute('aria-expanded') === 'true' || false;
+      navBtn.setAttribute('aria-expanded', String(!expanded));
+    });
+  </script>
+</body>
+</html>

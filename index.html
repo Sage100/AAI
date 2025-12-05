@@ -3,144 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anabaptist Aid Initiative (AAI)</title>
-  <meta name="description" content="Anabaptist Aid Initiative (AAI) — registered NGO in Nigeria. AAI administers the SALT program in cooperation with BHN and CAM." />
-  <meta property="og:title" content="Anabaptist Aid Initiative (AAI)" />
-  <meta property="og:description" content="Registered NGO in Nigeria. Administering the SALT program in cooperation with BHN and CAM." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://anabaptistaid.org" />
-  <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/620550fe91e339149f70eaa9/968b0d52-3b08-438a-92b0-5698b3a87f50/1P6A5314.jpeg" />
+  <title>Anabaptist Aid | Official NGO Presence</title>
+  <meta name="description" content="Anabaptist Aid Initiative (AAI) — registered NGO in Nigeria administering the SALT program and supporting community development." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --navy:#1f2e46;
-      --ink:#0f172a;
-      --sand:#c9b792;
-      --stone:#f6f5f3;
-      --accent:#2b6f6d; /* subtle teal nod */
-      --maxw: 1120px;
-      --radius: 10px;
-      --shadow: 0 10px 24px rgba(0,0,0,.12);
-    }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; }
-    body{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:#172033;
-      background:#fff;
-      line-height:1.55;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
-
-    /* Header / Brand */
-    header{
-      position: sticky; top:0; z-index: 50;
-      background: rgba(255,255,255,.9); backdrop-filter: blur(6px);
-      border-bottom: 1px solid #e8e8e8;
-    }
-    .bar{ display:flex; align-items:center; justify-content:space-between; padding:10px 0; }
-    .brand{ display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.3px; color:var(--navy); text-decoration:none; }
-    .badge{
-      display:inline-grid; place-items:center;
-      width:44px; height:44px; border:2px solid var(--navy); border-radius:6px;
-      font-weight:800; letter-spacing:2px; color:var(--navy);
-    }
-    .brand span.txt{ font-weight:800; }
-    nav a{ margin-left:18px; font-weight:600; color:#25324a; }
-    nav .btn{ background:var(--navy); color:#fff; padding:10px 14px; border-radius:8px; box-shadow: var(--shadow); }
-    nav .btn:hover{ opacity:.95; text-decoration:none; }
-
-    /* Hero */
-    .hero{
-      position:relative; color:#fff; text-align:left;
-      background:
-        linear-gradient( to bottom right, rgba(15,23,42,.55), rgba(15,23,42,.45) ),
-        url('https://images.squarespace-cdn.com/content/v1/620550fe91e339149f70eaa9/968b0d52-3b08-438a-92b0-5698b3a87f50/1P6A5314.jpeg') center/cover no-repeat;
-    }
-    .hero .wrap{ padding: 92px 20px 96px; }
-    .eyebrow{ display:inline-block; background:rgba(201,183,146,.9); color:#1d2436; padding:6px 10px; border-radius:6px; font-weight:700; letter-spacing:.3px; }
-    h1{ font-family: Merriweather, Georgia, serif; font-size: clamp(28px, 4.2vw, 48px); line-height:1.15; margin:16px 0 10px; }
-    .lead{ font-size: clamp(16px, 2vw, 18px); max-width: 780px; opacity:.98; }
-    .cta{ margin-top:22px; display:flex; gap:12px; flex-wrap:wrap; }
-    .btn{
-      display:inline-block; padding:12px 18px; border-radius:10px; font-weight:700; border:2px solid transparent;
-    }
-    .btn.primary{ background:#ffffff; color:var(--navy); }
-    .btn.primary:hover{ background:#f3f4f6; text-decoration:none; }
-    .btn.ghost{ border-color:#fff; color:#fff; }
-    .btn.ghost:hover{ background:rgba(255,255,255,.1); text-decoration:none; }
-
-    /* Sections */
-    section{ padding: 68px 0; }
-    section.alt{ background: var(--stone); }
-    h2{ font-family:Merriweather, Georgia, serif; font-size: clamp(22px, 3vw, 32px); margin:0 0 22px; color:var(--ink); }
-    .grid{ display:grid; gap:22px; grid-template-columns: repeat(12, 1fr); }
-    .card{
-      grid-column: span 4; background:#fff; border-radius: var(--radius);
-      padding:18px 18px 16px; border:1px solid #eee; box-shadow: var(--shadow);
-    }
-    .kpi{
-      display:flex; gap:14px; align-items:flex-start; padding: 18px; border-radius: var(--radius);
-      background:#fff; border:1px solid #eee; box-shadow: var(--shadow);
-    }
-    .kpi b{ font-size:22px; display:block; }
-    .note{ font-size:14px; color:#445; opacity:.85; }
-
-    /* Media blocks */
-    .media{
-      display:grid; gap:22px; grid-template-columns: repeat(12, 1fr); align-items:center;
-    }
-    .media .pic{ grid-column: span 6; }
-    .media .copy{ grid-column: span 6; }
-    .frame{
-      position:relative; overflow:hidden; border-radius:12px; box-shadow: var(--shadow);
-      background:#000;
-    }
-    .frame img{ width:100%; display:block; object-fit:cover; aspect-ratio: 16/10; }
-    .logos{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
-    .logos img{ height:54px; width:auto; filter: saturate(.95) contrast(.95); }
-
-    /* Footer */
-    footer{ background:#0f172a; color:#e8edf5; padding: 28px 0 48px; }
-    footer a{ color:#e7e3d4; }
-    .small{ font-size:13px; opacity:.9; }
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .card{ grid-column: span 6; }
-      .media .pic, .media .copy{ grid-column: 1 / -1; }
-    }
-    @media (max-width: 640px){
-      .card{ grid-column: 1 / -1; }
-      nav{ display:none; }
-      .menu{
-        display:inline-flex; align-items:center; justify-content:center; gap:8px;
-        background:#fff; border:1px solid #e7e7e7; padding:10px 12px; border-radius:8px; font-weight:700; color:#25324a;
-      }
-      /* simple toggler */
-      #nav.open + nav{ display:block; padding:10px 0 16px; }
-      nav a{ display:inline-block; margin:8px 10px 0 0; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <div class="wrap bar">
-      <a class="brand" href="#">
-        <!-- Simple block text logo -->
+      <a class="brand" href="index.html">
         <span class="badge" aria-hidden="true">AAI</span>
-        <span class="txt">Anabaptist Aid Initiative</span>
+        <span class="txt">Anabaptist Aid</span>
       </a>
-
+      <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
       <nav id="menu" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#verification">Verification</a>
-        <a href="#relationship">Partners</a>
-        <a href="#contact">Contact</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="videos.html">Videos</a>
+        <a href="salt-program.html">SALT Program</a>
+        <a class="btn secondary" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact</a>
         <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
       </nav>
     </div>
@@ -150,10 +31,10 @@
     <section class="hero" role="img" aria-label="Savings group gathering in Nigeria">
       <div class="wrap">
         <span class="eyebrow">Registered NGO in Nigeria</span>
-        <h1>Anabaptist Aid Initiative (AAI)</h1>
+        <h1>Anabaptist Aid Initiative</h1>
         <p class="lead">
-          AAI administers the SALT program in Nigeria in cooperation with Brethren Hope for the Nations (BHN) and Christian Aid Ministries (CAM).
-          This site exists to clearly identify our registered organization for official and public reference.
+          AAI is a registered Nigerian NGO that administers the SALT program in cooperation with Brethren Hope for the Nations (BHN) and Christian Aid Ministries (CAM).
+          This official website is designed to validate our organization and provide clear contact and donation pathways within Nigeria.
         </p>
         <div class="cta">
           <a class="btn primary" href="#verification">View verification</a>
@@ -167,17 +48,17 @@
         <h2>Who we are</h2>
         <div class="grid">
           <div class="card">
-            <b>Mission</b>
-            <p>To serve Nigerian communities through Christ‑centered teaching and practical programs that foster savings discipline, vocational skills, and long‑term well‑being.</p>
+            <h3>Mission</h3>
+            <p>Serve Nigerian communities with Christ-centered teaching and practical programs that foster disciplined saving, vocational skills, and long-term well-being.</p>
           </div>
           <div class="card">
-            <b>What we do</b>
-            <p>We coordinate and support SALT Savings groups and Living Hope Vocational School (LHVS) programming in cooperation with our partners.</p>
+            <h3>What we do</h3>
+            <p>Coordinate and support SALT Savings Groups and Living Hope Vocational School programming alongside BHN and CAM to deliver consistent training and accountability.</p>
           </div>
           <div class="card">
-            <b>Donations</b>
-            <p>AAI does not process donations on this site. For online giving and receipts, please use the SALT Nigeria donations page.</p>
-            <p><a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate via SALT Nigeria</a></p>
+            <h3>Giving</h3>
+            <p>Online donations are handled through the SALT Nigeria system to ensure receipts and transparency.</p>
+            <p><a class="btn chip" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate via SALT Nigeria</a></p>
           </div>
         </div>
       </div>
@@ -208,7 +89,7 @@
             <div>
               <b>Registration / RC No.</b>
               <div>____________________________</div>
-              <div class="note">Provide your Corporate Affairs Commission (CAC) registration number here.</div>
+              <div class="note">Insert Corporate Affairs Commission (CAC) registration number when issued.</div>
             </div>
           </div>
           <div class="kpi">
@@ -240,7 +121,7 @@
       <div class="wrap media">
         <div class="copy">
           <h2>Programs we support</h2>
-          <p>Through the SALT program we facilitate savings groups, youth engagement, and vocational training via LHVS. These initiatives cultivate disciplined saving, quality teaching, and measurable growth.</p>
+          <p>Through the SALT program we facilitate savings groups, youth engagement, and vocational training via Living Hope Vocational School. These initiatives cultivate disciplined saving, quality teaching, and measurable growth.</p>
           <p><a href="https://www.saltnigeria.org" target="_blank" rel="noopener">Learn more at SALT Nigeria</a></p>
         </div>
         <div class="pic">
@@ -256,15 +137,15 @@
         <h2>Contact</h2>
         <div class="grid">
           <div class="card" style="grid-column: span 7;">
-            <b>General inquiries</b>
+            <h3>General inquiries</h3>
             <p>Email: <a href="mailto:info@anabaptistaid.org">info@anabaptistaid.org</a></p>
             <p>Phone: ____________________________</p>
             <p>Address: ____________________________</p>
           </div>
           <div class="card" style="grid-column: span 5;">
-            <b>Donations</b>
+            <h3>Donations</h3>
             <p>For online giving, monthly sponsorships, and receipts, please use our existing SALT Nigeria donation system.</p>
-            <p><a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate via SALT Nigeria</a></p>
+            <p><a class="btn chip" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate via SALT Nigeria</a></p>
           </div>
         </div>
       </div>
@@ -273,15 +154,17 @@
 
   <footer role="contentinfo">
     <div class="wrap">
+      <div class="foot-actions">
+        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
+        <a class="btn ghost" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact Us</a>
+      </div>
       <p class="small">
-        © <span id="y"></span> Anabaptist Aid Initiative. This informational site exists to identify the registered NGO in Nigeria
-        and to explain our cooperation with partners. Online donations are processed on the SALT Nigeria website.
+        © <span id="y"></span> Anabaptist Aid Initiative. This informational site exists to identify the registered NGO in Nigeria and to explain our cooperation with partners. Online donations are processed on the SALT Nigeria website.
       </p>
     </div>
   </footer>
 
   <script>
-    // year + simple mobile menu
     document.getElementById('y').textContent = new Date().getFullYear();
     const navBtn = document.getElementById('nav');
     navBtn?.addEventListener('click', () => {

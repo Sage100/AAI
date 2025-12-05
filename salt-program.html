@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SALT Program | Anabaptist Aid Initiative</title>
+  <meta name="description" content="Learn how Anabaptist Aid Initiative administers the SALT program in Nigeria with BHN and CAM." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="index.html">
+        <span class="badge" aria-hidden="true">AAI</span>
+        <span class="txt">Anabaptist Aid</span>
+      </a>
+      <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
+      <nav id="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="videos.html">Videos</a>
+        <a class="active" href="salt-program.html">SALT Program</a>
+        <a class="btn secondary" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact</a>
+        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="img" aria-label="SALT training gathering">
+      <div class="wrap">
+        <span class="eyebrow">In partnership with BHN and CAM</span>
+        <h1>The SALT Program</h1>
+        <p class="lead">AAI administers the SALT (Shared Accountability, Lending &amp; Teaching) program in Nigeria, combining biblical teaching with financial discipline to strengthen families and communities.</p>
+        <div class="cta">
+          <a class="btn primary" href="#pillars">Program pillars</a>
+          <a class="btn ghost" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Give to SALT Nigeria</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillars">
+      <div class="wrap">
+        <h2>Core components</h2>
+        <ul class="program-list">
+          <li class="program-item">
+            <b>Savings Groups</b>
+            Members meet weekly, contribute to a shared fund, and receive discipleship-driven business coaching. The pooled savings create rotating access to capital while encouraging accountability and stewardship.
+          </li>
+          <li class="program-item">
+            <b>Vocational Training (LHVS)</b>
+            Living Hope Vocational School offers trades such as tailoring, agriculture, and carpentry, integrating hands-on skills with biblical foundations to launch sustainable livelihoods.
+          </li>
+          <li class="program-item">
+            <b>Business Teaching</b>
+            Practical instruction on pricing, record keeping, customer service, and planning helps participants apply principled business practices to grow responsibly.
+          </li>
+          <li class="program-item">
+            <b>Community Accountability</b>
+            Facilitators mentor group leaders, track growth, and reinforce faithful repayment, ensuring integrity and stability within each cluster.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap media">
+        <div class="pic">
+          <figure class="frame">
+            <img src="https://images.squarespace-cdn.com/content/v1/620550fe91e339149f70eaa9/b36d5edc-5a8f-4569-807e-37bec5a5df51/SALT+Nigeria+Header.jpg" alt="SALT Nigeria field photo" />
+          </figure>
+        </div>
+        <div class="copy">
+          <h2>How AAI serves Nigeria</h2>
+          <p>AAI is the locally registered entity that coordinates SALT activities, onboards new savings groups, and aligns reporting with Brethren Hope for the Nations and Christian Aid Ministries. This alignment keeps Nigerian operations transparent and accountable.</p>
+          <p>Program materials, training cohorts, and donor communication mirror the approach described on the SALT Nigeria website, ensuring a consistent experience for churches, community leaders, and government partners.</p>
+          <div class="cta">
+            <a class="btn chip" href="https://www.saltnigeria.org" target="_blank" rel="noopener">Visit saltnigeria.org</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Next steps</h2>
+        <div class="grid">
+          <div class="card" style="grid-column: span 6;">
+            <h3>Partner with AAI</h3>
+            <p>Churches and community leaders can invite AAI to introduce SALT savings groups, provide facilitator training, and set up reporting for accountability.</p>
+            <p><a class="btn chip" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Request information</a></p>
+          </div>
+          <div class="card" style="grid-column: span 6;">
+            <h3>Support financially</h3>
+            <p>Donations through SALT Nigeria fund facilitator coaching, translations, training materials, and start-up kits for new savings groups.</p>
+            <p><a class="btn chip" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      <div class="foot-actions">
+        <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
+        <a class="btn ghost" href="https://www.saltnigeria.org/contact" target="_blank" rel="noopener">Contact Us</a>
+      </div>
+      <p class="small">
+        © <span id="y"></span> Anabaptist Aid Initiative. AAI administers SALT in Nigeria in partnership with BHN and CAM; online forms are hosted on saltnigeria.org.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const navBtn = document.getElementById('nav');
+    navBtn?.addEventListener('click', () => {
+      navBtn.classList.toggle('open');
+      const expanded = navBtn.getAttribute('aria-expanded') === 'true' || false;
+      navBtn.setAttribute('aria-expanded', String(!expanded));
+    });
+  </script>
+</body>
+</html>
