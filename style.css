@@ -88,34 +88,17 @@ nav .active { color: var(--accent); }
 .hero-panel {
   position: relative;
   max-width: 880px;
-  background: linear-gradient(135deg, rgba(255,255,255,.26), rgba(255,255,255,.08));
-  border: 1px solid rgba(255,255,255,.28);
+  background: #fff;
+  border: 1px solid rgba(15,23,42,.12);
   box-shadow: 0 24px 60px rgba(0, 15, 35, .36);
-  backdrop-filter: blur(18px) saturate(125%);
-  -webkit-backdrop-filter: blur(18px) saturate(125%);
   border-radius: 20px;
   padding: 32px 32px 34px;
   color: #0d1a2f;
   overflow: hidden;
 }
-.hero-panel::before {
-  content: '';
-  position: absolute;
-  inset: -20% -30% auto auto;
-  width: 240px;
-  height: 240px;
-  background: radial-gradient(circle, rgba(43,111,109,.25), transparent 65%);
-  opacity: .7;
-  pointer-events: none;
-}
+.hero-panel::before,
 .hero-panel::after {
-  content: '';
-  position: absolute;
-  inset: auto auto -32% -28%;
-  width: 260px;
-  height: 260px;
-  background: radial-gradient(circle, rgba(255,255,255,.18), transparent 68%);
-  pointer-events: none;
+  display: none;
 }
 .eyebrow { display:inline-block; background: rgba(191,200,217,.85); color:#10223d; padding:7px 12px; border-radius:9px; font-weight:750; letter-spacing:.4px; box-shadow: 0 8px 18px rgba(0,0,0,.12); }
 h1 { font-family: 'Merriweather', Georgia, serif; font-size: clamp(28px, 4.4vw, 52px); line-height:1.12; margin: 16px 0 12px; }
@@ -172,6 +155,27 @@ h2 { font-family:'Merriweather', Georgia, serif; font-size: clamp(22px, 3.2vw, 3
 }
 .kpi b { font-size: 20px; display:block; }
 .note { font-size: 14px; color:#445; opacity:.85; }
+.verify-card {
+  background:#fff;
+  border-radius: var(--radius);
+  border:1px solid #eee;
+  box-shadow: var(--shadow);
+  padding: 24px 26px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.verify-row b {
+  display:block;
+  font-size:16px;
+  letter-spacing:.15px;
+  color:var(--ink);
+  margin-bottom:3px;
+}
+.verify-row div + .note,
+.verify-row div + div.note {
+  margin-top:4px;
+}
 
 .media {
   display:grid; gap:22px; grid-template-columns: repeat(12, 1fr); align-items:center;
@@ -192,7 +196,7 @@ h2 { font-family:'Merriweather', Georgia, serif; font-size: clamp(22px, 3.2vw, 3
 .program-item b { display:block; margin-bottom: 6px; }
 
 .logos { display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
-.logos img { height:56px; width:auto; filter: saturate(.95) contrast(.95); }
+.logos img { height:96px; width:auto; filter: saturate(.95) contrast(.95); }
 
 footer { background:#0f172a; color:#e8edf5; padding: 32px 0 52px; }
 footer a { color:#e7e3d4; }
