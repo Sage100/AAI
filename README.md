@@ -1,4 +1,5 @@
 # AAI
 
 Trying Cloudflare Pages
-falling-frost-5600.jaminsage2.workers.dev
+
+https://aai-d8x.pages.dev
