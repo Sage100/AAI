@@ -1,0 +1,41 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Anabaptist Aid Initiative"
+
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Anabaptist Aid Initiative (AAI) — registered NGO in Nigeria administering the SALT program and supporting community development."
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "videos"
+    name = "Videos"
+    url = "/videos/"
+    weight = 2
+  [[menu.main]]
+    identifier = "salt-program"
+    name = "SALT Program"
+    url = "/salt-program/"
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "https://www.saltnigeria.org/contact-us"
+    weight = 4
+    pre = true
+    [menu.main.params]
+      class = "btn secondary"
+  [[menu.main]]
+    identifier = "donate"
+    name = "Donate"
+    url = "https://www.saltnigeria.org/donate"
+    weight = 5
+    pre = true
+    [menu.main.params]
+      class = "btn"
