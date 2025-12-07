@@ -1,0 +1,28 @@
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="{{ relURL "/" }}">
+      <span class="badge" aria-hidden="true">AAI</span>
+      <span class="txt">Anabaptist Aid Initiative</span>
+    </a>
+    <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
+    <nav id="menu" aria-label="Primary">
+      {{ range .Site.Menus.main }}
+        {{- $isExternal := strings.HasPrefix .URL "http" -}}
+        {{- $isActive := and (not $isExternal) (or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (eq $.RelPermalink .URL)) -}}
+        <a data-page="{{ .Identifier }}" href="{{ if $isExternal }}{{ .URL }}{{ else }}{{ .URL | relURL }}{{ end }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }} class="{{ if $isActive }}active {{ end }}{{ with .Params.class }}{{ . }}{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>
+<script>
+  (function() {
+    const navBtn = document.getElementById('nav');
+    const nav = document.getElementById('menu');
+    navBtn?.addEventListener('click', () => {
+      navBtn.classList.toggle('open');
+      const expanded = navBtn.getAttribute('aria-expanded') === 'true';
+      navBtn.setAttribute('aria-expanded', String(!expanded));
+      nav?.classList.toggle('open');
+    });
+  })();
+</script>

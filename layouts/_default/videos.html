@@ -1,0 +1,64 @@
+{{ define "main" }}
+  <section class="hero" role="img" aria-label="Community training session in Nigeria">
+    <div class="wrap">
+      <div class="hero-panel">
+        <span class="eyebrow">Media from the field</span>
+        <h1>Videos &amp; Stories</h1>
+        <p class="lead">A glimpse into the SALT savings groups, vocational training, and partner collaboration made possible through Anabaptist Aid Initiative.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.saltnigeria.org" target="_blank" rel="noopener">Visit SALT Nigeria</a>
+          <a class="btn ghost" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Support the work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Featured clips</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="{{ "Videos/How%20a%20SALT%20Savings%20Group%20Works.mp4" | relURL }}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="body">
+            <h3>How a SALT Savings Group Works</h3>
+            <p>How disciplined saving and accountability groups strengthen families and businesses.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="{{ "Videos/Will%20you%20be%20one%20of%20them%3F%3F%3F.mp4" | relURL }}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="body">
+            <h3>Will you be one of them?</h3>
+            <p>Invitation to join the growing network of SALT groups across Nigeria.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="{{ "Videos/Christ%20overcomes%20limitations.mp4" | relURL }}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="body">
+            <h3>Christ overcomes limitations</h3>
+            <p>Testimony of how Christ-centered teaching removes barriers to growth and faithfulness.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="{{ "Videos/-Saving%20Learning%20Growing-.mp4" | relURL }}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="body">
+            <h3>-Saving Learning Growing-</h3>
+            <p>Snapshots of group members learning, saving, and growing together.</p>
+          </div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:16px;">Looking for more? Contact the AAI communications team for local media resources.</p>
+    </div>
+  </section>
+{{ end }}
