@@ -4,7 +4,7 @@
       <span class="badge" aria-hidden="true">AAI</span>
       <span class="txt">Anabaptist Aid Initiative</span>
     </a>
-    <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
+    <button id="nav" class="menu" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu">Menu ▾</button>
     <nav id="menu" aria-label="Primary">
       {{ range .Site.Menus.main }}
         {{- $isExternal := strings.HasPrefix .URL "http" -}}
@@ -18,11 +18,35 @@
   (function() {
     const navBtn = document.getElementById('nav');
     const nav = document.getElementById('menu');
-    navBtn?.addEventListener('click', () => {
+    const mobileBreakpoint = 980;
+
+    if (!navBtn || !nav) return;
+
+    const closeNav = () => {
+      navBtn.classList.remove('open');
+      navBtn.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
+    };
+
+    navBtn.addEventListener('click', () => {
       navBtn.classList.toggle('open');
       const expanded = navBtn.getAttribute('aria-expanded') === 'true';
       navBtn.setAttribute('aria-expanded', String(!expanded));
-      nav?.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+      if (!nav.contains(target) && !navBtn.contains(target)) {
+        closeNav();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > mobileBreakpoint) {
+        closeNav();
+      }
     });
   })();
 </script>

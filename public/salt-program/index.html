@@ -15,7 +15,7 @@
       <span class="badge" aria-hidden="true">AAI</span>
       <span class="txt">Anabaptist Aid Initiative</span>
     </a>
-    <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
+    <button id="nav" class="menu" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu">Menu ▾</button>
     <nav id="menu" aria-label="Primary">
       <a data-page="home" href="/" class="">Home</a>
       <a data-page="videos" href="/videos/" class="">Videos</a>
@@ -30,11 +30,35 @@
   (function() {
     const navBtn = document.getElementById('nav');
     const nav = document.getElementById('menu');
-    navBtn?.addEventListener('click', () => {
+    const mobileBreakpoint = 980;
+
+    if (!navBtn || !nav) return;
+
+    const closeNav = () => {
+      navBtn.classList.remove('open');
+      navBtn.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
+    };
+
+    navBtn.addEventListener('click', () => {
       navBtn.classList.toggle('open');
       const expanded = navBtn.getAttribute('aria-expanded') === 'true';
       navBtn.setAttribute('aria-expanded', String(!expanded));
-      nav?.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+      if (!nav.contains(target) && !navBtn.contains(target)) {
+        closeNav();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > mobileBreakpoint) {
+        closeNav();
+      }
     });
   })();
 </script>
@@ -123,11 +147,11 @@
   <footer role="contentinfo">
   <div class="wrap">
     <div class="foot-actions">
-      <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-      <a class="btn ghost" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Contact Us</a>
+      <a class="btn chip" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
+      <a class="btn chip" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Contact Us</a>
     </div>
     <p class="small">
-      © 2025 Anabaptist Aid Initiative. This informational site exists to identify the registered NGO in Nigeria and to explain our cooperation with partners. Online donations are processed on the SALT Nigeria website.
+      © 2025 Anabaptist Aid Initiative.
     </p>
   </div>
 </footer>

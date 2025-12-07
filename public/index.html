@@ -16,7 +16,7 @@
       <span class="badge" aria-hidden="true">AAI</span>
       <span class="txt">Anabaptist Aid Initiative</span>
     </a>
-    <button id="nav" class="menu" aria-expanded="false" aria-controls="menu">Menu ▾</button>
+    <button id="nav" class="menu" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu">Menu ▾</button>
     <nav id="menu" aria-label="Primary">
       <a data-page="home" href="/" class="active ">Home</a>
       <a data-page="videos" href="/videos/" class="">Videos</a>
@@ -31,11 +31,35 @@
   (function() {
     const navBtn = document.getElementById('nav');
     const nav = document.getElementById('menu');
-    navBtn?.addEventListener('click', () => {
+    const mobileBreakpoint = 980;
+
+    if (!navBtn || !nav) return;
+
+    const closeNav = () => {
+      navBtn.classList.remove('open');
+      navBtn.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
+    };
+
+    navBtn.addEventListener('click', () => {
       navBtn.classList.toggle('open');
       const expanded = navBtn.getAttribute('aria-expanded') === 'true';
       navBtn.setAttribute('aria-expanded', String(!expanded));
-      nav?.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+      if (!nav.contains(target) && !navBtn.contains(target)) {
+        closeNav();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > mobileBreakpoint) {
+        closeNav();
+      }
     });
   })();
 </script>
@@ -45,11 +69,9 @@
   <section class="hero" role="img" aria-label="Savings group gathering in Nigeria">
     <div class="wrap">
       <div class="hero-panel">
-        <span class="eyebrow">Registered NGO in Nigeria</span>
         <h1>Anabaptist Aid Initiative</h1>
         <p class="lead">
-          AAI is a registered Nigerian NGO that facilitates the SALT program in Nigeria in partnership with Brethren Hope for the Nations (BHN) and Christian Aid Ministries (CAM).
-          This site connects community members, donors, and government partners directly to SALT Nigeria resources.
+          Anabaptist Aid Initiative (AAI) is a registered Nigerian NGO that facilitates the SALT savings group program in Nigeria.
         </p>
         <p class="note">Serving Plateau, Borno, Bauchi, Adamawa, and nearby states with Savings Groups, Youth Savings Groups, and Living Hope Vocational School training.</p>
       </div>
@@ -66,7 +88,7 @@
         </div>
         <div class="card">
           <h3>What we do</h3>
-          <p>Coordinate and support SALT Savings Groups and Living Hope Vocational School programming alongside BHN and CAM to deliver consistent training and accountability.</p>
+          <p>Coordinate and support SALT Savings Groups and Living Hope Vocational School programming.</p>
         </div>
         <div class="card">
           <h3>Giving</h3>
@@ -99,14 +121,12 @@
           <div class="verify-row">
             <b>Registration / RC No.</b>
             <div>101022 (Incorporated Trustee)</div>
-            <div class="note">Commercial Register announcement reflects registration with the Corporate Affairs Commission.</div>
           </div>
           <div class="verify-row">
             <b>Office / Mailing</b>
             <div>NO. 12 OLD BUKURU ROAD (J.M. SAMCHI ROAD) EYN CHURCH, OPPOSITE PLATEAU STATE HOUSE OF ASSEMBLY COMPLEX, JOS NORTH, PLATEAU STATE</div>
           </div>
         </div>
-        <p class="note">For certified copies or letters of introduction, contact the AAI office below or view the <a href="https://nigeria24.me/anabaptist-aid-initiative" target="_blank" rel="noopener">official register notice</a>.</p>
       </div>
     </div>
   </section>
@@ -187,11 +207,11 @@
   <footer role="contentinfo">
   <div class="wrap">
     <div class="foot-actions">
-      <a class="btn" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
-      <a class="btn ghost" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Contact Us</a>
+      <a class="btn chip" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate</a>
+      <a class="btn chip" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Contact Us</a>
     </div>
     <p class="small">
-      © 2025 Anabaptist Aid Initiative. This informational site exists to identify the registered NGO in Nigeria and to explain our cooperation with partners. Online donations are processed on the SALT Nigeria website.
+      © 2025 Anabaptist Aid Initiative.
     </p>
   </div>
 </footer>
