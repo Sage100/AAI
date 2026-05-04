@@ -25,8 +25,8 @@
         </div>
         <div class="card">
           <h3>Local coordination</h3>
-          <p>For program questions, community invitations, or local coordination, contact the SALT Nigeria team.</p>
-          <p><a class="btn chip" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Contact SALT Nigeria</a></p>
+          <p>For program questions, community invitations, or local coordination, use the contact form below.</p>
+          <p><a class="btn chip" href="#contact">Contact AAI</a></p>
         </div>
       </div>
     </div>
@@ -110,8 +110,8 @@
         </div>
         <div class="card">
           <h3>Community contact</h3>
-          <p>Churches, community leaders, and facilitators can contact the SALT Nigeria team about program questions.</p>
-          <p><a class="btn chip" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Ask about the work</a></p>
+          <p>Churches, community leaders, and facilitators can use the form below for program questions.</p>
+          <p><a class="btn chip" href="#contact">Ask about the work</a></p>
         </div>
       </div>
     </div>
@@ -119,14 +119,16 @@
 
   <section id="contact">
     <div class="wrap">
-      <h2>Contact</h2>
-      <div class="grid">
-        <div class="card wide-card">
-          <h3>General inquiries</h3>
-          <p>For program questions, community invitations, or AAI inquiries, use the contact button below.</p>
-          <p><a class="btn chip" href="https://www.saltnigeria.org/contact-us" target="_blank" rel="noopener">Contact SALT Nigeria</a></p>
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <p class="eyebrow">Contact</p>
+          <h2>General inquiries</h2>
+          <p>For program questions, community invitations, or AAI inquiries, send a message here.</p>
         </div>
-        <div class="card side-card">
+        <div class="contact-panel">
+          {{ partial "contact-form.html" . }}
+        </div>
+        <div class="card contact-side">
           <h3>Giving through SALT Nigeria</h3>
           <p>For giving, use the SALT Nigeria donation page.</p>
           <p><a class="btn chip" href="https://www.saltnigeria.org/donate" target="_blank" rel="noopener">Donate via SALT Nigeria</a></p>

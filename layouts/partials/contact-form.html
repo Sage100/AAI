@@ -1,0 +1,31 @@
+<form class="contact-form" name="aai-contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="website" data-netlify-recaptcha="true">
+  <input type="hidden" name="form-name" value="aai-contact" />
+  <input type="hidden" name="subject" data-remove-prefix value="AAI contact form submission (%{submissionId})" />
+  <input type="hidden" name="source" value="Anabaptist Aid Initiative website" />
+  <p class="form-honeypot" aria-hidden="true">
+    <label>Website <input name="website" tabindex="-1" autocomplete="off" /></label>
+  </p>
+  <fieldset>
+    <legend>Name <span class="required">(required)</span></legend>
+    <div class="form-grid">
+      <label>
+        <span>First Name</span>
+        <input type="text" name="first-name" autocomplete="given-name" required />
+      </label>
+      <label>
+        <span>Last Name</span>
+        <input type="text" name="last-name" autocomplete="family-name" required />
+      </label>
+    </div>
+  </fieldset>
+  <label>
+    <span>Email <span class="required">(required)</span></span>
+    <input type="email" name="email" autocomplete="email" inputmode="email" required />
+  </label>
+  <label>
+    <span>Message</span>
+    <textarea name="message" rows="7"></textarea>
+  </label>
+  <div class="captcha-slot" data-netlify-recaptcha="true"></div>
+  <button class="btn primary" type="submit">Submit</button>
+</form>

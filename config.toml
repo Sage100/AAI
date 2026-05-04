@@ -26,7 +26,7 @@ disableKinds = ["taxonomy", "term"]
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
-    url = "https://www.saltnigeria.org/contact-us"
+    url = "/#contact"
     weight = 4
     pre = true
     [menu.main.params]
