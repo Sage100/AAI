@@ -5,7 +5,7 @@ title = "Anabaptist Aid Initiative"
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Anabaptist Aid Initiative (AAI) — registered NGO in Nigeria administering the SALT program and supporting community development."
+  description = "Anabaptist Aid Initiative (AAI) — registered Nigerian organization coordinating SALT Savings Groups, Youth Savings Groups, and vocational training work in Nigeria."
 
 [menu]
   [[menu.main]]
