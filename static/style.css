@@ -252,17 +252,38 @@ h2 { font-family:'Merriweather', Georgia, serif; font-size: clamp(22px, 3.2vw, 3
 .card.side-card { grid-column: span 5; }
 .card.half-card { grid-column: span 6; }
 
+.kpi-grid {
+  display:grid;
+  gap:18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 28px 0 16px;
+}
 .kpi {
   display:flex;
-  gap:14px;
-  align-items:flex-start;
-  padding: 18px;
+  flex-direction:column;
+  gap:8px;
+  padding: 22px 22px 20px;
   border-radius: var(--radius);
   background:#fff;
-  border:1px solid #eee;
-  box-shadow: var(--shadow);
+  border:1px solid #e5e0d3;
+  box-shadow: 0 10px 24px rgba(15,23,42,.08);
 }
-.kpi b { font-size: 20px; display:block; }
+.kpi b {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+  color: var(--navy);
+  display:block;
+}
+.kpi span {
+  color:#445;
+  font-size: 15px;
+  font-weight: 650;
+}
+.stat-source {
+  max-width: 760px;
+  margin: 0;
+}
 .note { font-size: 14px; color:#445; opacity:.85; }
 .verify-card {
   background:#fff;
@@ -458,6 +479,7 @@ footer .footer-brand p {
 }
 @media (max-width: 900px){
   .card { grid-column: span 6; }
+  .kpi-grid { grid-template-columns: 1fr; }
   .media .pic, .media .copy { grid-column: 1 / -1; }
   .contact-layout {
     grid-template-columns: 1fr;
